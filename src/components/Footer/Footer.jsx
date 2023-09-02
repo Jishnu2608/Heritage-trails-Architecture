@@ -22,7 +22,7 @@ const Footer = () => {
 
             <div className="flexColStart f-right">
                 <span className="primaryText">Information</span>
-                <span className="secondaryText" style={{color: "#1f3e72"} }>Tezpur 784001, Assam</span>
+                <span className="secondaryText" style={{color: "#1f3e72"} }>Tezpur, Assam - 784001<br/>© 2021 Jishnudeep Borah. All rights reserved.</span>
 
                 
             </div>
