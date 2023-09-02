@@ -1,0 +1,111 @@
+.section-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  width: 40%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .section-image {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    margin: 0 10px; 
+  }
+
+  .justify-content{
+    font-size: 15px; 
+  }
+
+  .content-first{
+    font-size: 15px; 
+  }
+
+  .content-wrapper{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+}
+
+@media (max-width: 992px){
+  .content-container {
+    margin: 0 10px; 
+  }
+
+  .content-wrapper{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+}
+
+.content-wrapper {
+  padding: 40px 0;
+  overflow: hidden; /* Prevent content from overflowing the container */
+  
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.justify-content{
+  text-align: justify;
+  font-size: 16px;
+}
+
+.content-first{
+  font-size: 16px;
+}
+
+.section-card {
+  min-height: 500px; /* Adjust this value as needed */
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  position: relative;
+}
+
+
+.section-card.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-in 1s ease forwards;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-link {
+  text-decoration: none;
+}
+
+.scroll-link:hover h2 {
+  color: #f39c12;
+}
+
+.section-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
