@@ -135,7 +135,7 @@ const Content_architecture = () => {
               <p className='justify-content'>{section['content-sixth-ptII']}</p>
 
 
-
+              {/*Seventh*/}
               {section['image-sixth'] && (
                 <img
                   src={section['image-sixth']}
@@ -152,13 +152,7 @@ const Content_architecture = () => {
               )}
 
               <p className='justify-content'>{section['content-seventh-ptII']}</p>
-              {section['image-seventh'] && (
-                <img
-                  src={section['image-seventh']}
-                  alt={section.title}
-                  className={`section-image ${activeSection === index ? 'fade-in' : ''}`}
-                />
-              )}
+
             </div>
           </div>
         ))}
