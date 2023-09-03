@@ -2,12 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import contentArchitecture from '../../utils/content-architecture.json';
 import './content-architecture.css';
-import { Blurhash } from 'react-blurhash';
 
 const Content_architecture = () => {
   const [activeSection, setActiveSection] = useState(0);
-  const [imageFirstLoaded, setImageFirstLoaded] = useState({});
-  const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,15 +27,6 @@ const Content_architecture = () => {
     };
   }, []);
 
-  const handleImageLoad = (sectionId, img) => {
-    const { naturalWidth, naturalHeight } = img;
-    setImageDimensions({ width: naturalWidth, height: naturalHeight });
-    setImageFirstLoaded((prevState) => ({
-      ...prevState,
-      [sectionId]: true,
-    }));
-  };
-
   return (
     <section className="content-wrapper">
       <div className="paddings innerWidth content-container">
@@ -56,30 +44,16 @@ const Content_architecture = () => {
               </div>
               
               {/*Second*/}
-              {/*--------------------------------------*/}
-              {section['blurhash-first'] && !imageFirstLoaded[section.id] && (
-              <div className="section-image-wrapper">
-                <Blurhash
-                  hash={section['blurhash-first']}
-                  width={imageDimensions.width}  // Use the image's width
-                  height={imageDimensions.height} // Use the image's height
-                  resolutionX={32}
-                  resolutionY={32}
-                  punch={1}
-                  className="section-image-blurhash"
-                />
-              </div>
-            )}
-              {/*--------------------------------------*/}
               {section['image-first'] && (
                 <img
                   src={section['image-first']}
                   alt={section.title}
                   className={`section-image ${activeSection === index ? 'fade-in' : ''}`}
-                  onLoad={(e) => handleImageLoad(section.id, e.target)}
                 />
               )}
-             
+              {/* <div className={`content-second ${activeSection === index ? 'fade-in' : ''} justify-content` }>
+                {section['content-second']}
+              </div> */}
 
               {section['content-second'] && (
                 <div className={`content-second ${activeSection === index ? 'fade-in' : ''} justify-content`}>
