@@ -9,6 +9,25 @@
   margin-top: 10px;
 }
 
+.section-image-blurhash {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  text-align: center; /* Center horizontally */
+  margin-top: 20px;
+}
+
+/* Style for the wrapper div */
+.section-image-wrapper {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 40%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
 @media (max-width: 768px) {
   .section-image {
     width: 85%;
